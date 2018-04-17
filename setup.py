@@ -9,7 +9,7 @@ setup(
     author_email="me@mosquito.su",
     maintainer="Dmitry Orlov",
     maintainer_email="me@mosquito.su",
-    description="Write beautiful logs",
+    description="Let's write beautiful logs",
     package_dir={'': 'src'},
     packages=[''],
     license="Apache 2",
