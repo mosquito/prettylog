@@ -1,6 +1,27 @@
 prettylog
 =========
 
+.. image:: https://coveralls.io/repos/github/mosquito/prettylog/badge.svg?branch=master
+    :target: https://coveralls.io/github/mosquito/prettylog
+    :alt: Coveralls
+
+.. image:: https://travis-ci.org/mosquito/prettylog.svg
+    :target: https://travis-ci.org/mosquito/prettylog
+    :alt: Travis CI
+
+.. image:: https://img.shields.io/pypi/v/prettylog.svg
+    :target: https://pypi.python.org/pypi/prettylog/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/wheel/prettylog.svg
+    :target: https://pypi.python.org/pypi/prettylog/
+
+.. image:: https://img.shields.io/pypi/pyversions/prettylog.svg
+    :target: https://pypi.python.org/pypi/prettylog/
+
+.. image:: https://img.shields.io/pypi/l/prettylog.svg
+    :target: https://pypi.python.org/pypi/prettylog/
+
 Let's write beautiful logs:
 
 .. code-block:: python
