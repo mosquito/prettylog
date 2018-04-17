@@ -10,6 +10,7 @@ setup(
     maintainer="Dmitry Orlov",
     maintainer_email="me@mosquito.su",
     description="Let's write beautiful logs",
+    long_description=open('README.rst').read(),
     package_dir={'': 'src'},
     packages=[''],
     license="Apache 2",
