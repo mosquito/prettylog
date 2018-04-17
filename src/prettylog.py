@@ -1,5 +1,6 @@
 import logging
 import logging.handlers
+import os
 import sys
 import traceback
 import ujson
@@ -140,7 +141,9 @@ def create_logging_handler(log_format: LogFormat=LogFormat.color):
     elif log_format == LogFormat.color:
         return color_formatter()
     elif log_format == LogFormat.syslog:
-        return logging.handlers.SysLogHandler(address='/dev/log')
+        if os.path.exists('/dev/log'):
+            return logging.handlers.SysLogHandler(address='/dev/log')
+        return logging.handlers.SysLogHandler()
 
     raise NotImplementedError
 
