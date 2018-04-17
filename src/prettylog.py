@@ -146,16 +146,19 @@ def create_logging_handler(log_format: LogFormat=LogFormat.color):
 
 
 def wrap_logging_handler(handler: logging.Handler, buffer_size: int = 1024,
-                         logger_class=MemoryHandler) -> logging.Handler:
+                         logger_class=MemoryHandler,
+                         flush_level=logging.ERROR) -> logging.Handler:
 
-    buffered_handler = logger_class(buffer_size, target=handler)
+    buffered_handler = logger_class(buffer_size, target=handler,
+                                    flushLevel=flush_level)
 
     return buffered_handler
 
 
 def basic_config(level: int=logging.INFO,
                  log_format: Union[str, LogFormat]=LogFormat.color,
-                 buffered=True, buffer_size: int=1024):
+                 buffered=False, buffer_size: int=1024,
+                 flush_level=logging.ERROR):
 
     if isinstance(level, str):
         level = getattr(logging, level.upper())
@@ -173,6 +176,7 @@ def basic_config(level: int=logging.INFO,
         handler = wrap_logging_handler(
             handler,
             buffer_size=buffer_size,
+            flush_level=flush_level,
         )
 
     logging.basicConfig(

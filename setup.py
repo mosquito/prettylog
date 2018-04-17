@@ -41,5 +41,6 @@ setup(
             'timeout-decorator',
             'tox>=2.4',
         ],
+        ':python_version < "3.5"': 'typing >= 3.5.3',
     },
 )
