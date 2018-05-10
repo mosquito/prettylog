@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='prettylog',
-    version='0.1.1',
+    version='0.2.0',
     platforms="all",
     author="Dmitry Orlov",
     author_email="me@mosquito.su",
@@ -31,7 +31,7 @@ setup(
     ],
     install_requires=[
         'colorlog',
-        'ujson<1.40',
+        'fast-json',
     ],
     extras_require={
         'develop': [

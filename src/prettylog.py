@@ -3,7 +3,7 @@ import logging.handlers
 import os
 import sys
 import traceback
-import ujson
+import fast_json
 from logging.handlers import MemoryHandler
 from enum import IntEnum
 from types import MappingProxyType
@@ -89,11 +89,7 @@ class JSONLogFormatter(logging.Formatter):
                 traceback.format_exception(*record.exc_info)
             )
 
-        json_string = ujson.dumps(
-            payload, ensure_ascii=False, escape_forward_slashes=False,
-        )
-
-        return json_string
+        return fast_json.dumps(payload, ensure_ascii=False)
 
 
 def json_formatter(stream=None):
