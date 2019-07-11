@@ -6,6 +6,9 @@ import pytest
 from prettylog import basic_config, LogFormat, create_logging_handler
 
 
+logging.basicConfig()
+
+
 def test_choices():
     choices = LogFormat.choices()
     assert isinstance(choices, tuple)
@@ -54,7 +57,7 @@ def test_formats(fmt):
 
     try:
         raise Exception
-    except:
+    except Exception:
         logging.exception("Error")
 
 
