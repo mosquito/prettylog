@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='prettylog',
-    version='0.2.0',
+    version='0.3.0',
     platforms="all",
     author="Dmitry Orlov",
     author_email="me@mosquito.su",
