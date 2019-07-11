@@ -73,4 +73,6 @@ Parameter `buffered=True` enables memory buffer which flushing logs delayed.
         buffer_size=10,             # flush each 10 log records
         flush_level=loggging.ERROR, # or when record with this level will be sent
         log_format='color',
+        date_format=None,           # Disable date for logs, True enables it.
+                                    # str with format is custom date format.
     )
